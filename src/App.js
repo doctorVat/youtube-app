@@ -1,12 +1,11 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 
-
 import { VideoDetail, SearchBar, VideoList} from './components';
-// import VideoList from './components/VideoList';
-// import SearchBar from './components/SearchBar';
 
 import youtube from './api/youtube';
+
+
 
 
 class App extends React.Component{
