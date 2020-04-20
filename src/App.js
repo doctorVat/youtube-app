@@ -1,12 +1,11 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 
-
 import { VideoDetail, SearchBar, VideoList} from './components';
-// import VideoList from './components/VideoList';
-// import SearchBar from './components/SearchBar';
 
 import youtube from './api/youtube';
+
+
 
 
 class App extends React.Component{
@@ -39,9 +38,9 @@ class App extends React.Component{
     render(){
         const { selectedVideo, videos } = this.state; /**деструктуризация чтобы проще читался компонент Videodetail */
         return(
-           <Grid justify='center' container spacing={10}>
-               <Grid item xs={12}>
-                   <Grid container spacing={10}>
+           <Grid justify='center' container spacing={1}>
+               <Grid item xs={10}>
+                   <Grid container spacing={6}>
                        <Grid item xs={12}>
                       <SearchBar onFormSubmit={this.handleSubmit}/>
                        </Grid>
@@ -50,7 +49,7 @@ class App extends React.Component{
                        </Grid>
                        <Grid item xs={4}>
                       <VideoList videos={videos}
-                                onVideoSelect={this.onVideoSelect}/>
+                            onVideoSelect={this.onVideoSelect}/>
                        </Grid>
                    </Grid>
                </Grid>
